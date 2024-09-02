@@ -1,0 +1,53 @@
+import = [
+ "~/.config/alacritty/themes/rose-pine.toml"
+]
+
+[env]
+TERM="xterm-256color"
+
+[cursor]
+blink_interval = 0
+style = "Block"
+
+[font]
+size = 12.0
+
+[font.bold]
+family = "JetBrains Mono NFM"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetBrains Mono NFM"
+style = "Bold Italic"
+
+[font.italic]
+family = "JetBrains Mono NFM"
+style = "Italic"
+
+[font.normal]
+family = "JetBrains Mono NFM"
+style = "Regular"
+
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "Return"
+mods = "Super|Shift"
+
+[shell]
+args = ["--login"]
+program = "/bin/zsh"
+
+[window]
+opacity = 1 
+# opacity = 0.9 
+dynamic_title = false
+
+[window.padding]
+x = 10
+y = 10
+
+# [colors.primary]
+# background = "0x181923" 
+# #  background = "0x191724" 
+# #  background = "0x000000" 
