@@ -7,7 +7,7 @@ export LC_TIME=en_US.UTF-8
 
 #--------------------------------------------------#
 
-HISTFILE=~/zsh_history
+HISTFILE=~/zsh/zsh_history
 SAVEHIST=1000
 HISTSIZE=999
 setopt share_history
