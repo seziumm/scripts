@@ -3,7 +3,7 @@
 
 # --------------------- PACKAGES --------------------- #
 
-sudo pacman -Syu --noconfirm ttf-meslo fastfetch zsh git ripgrep wl-clipboard neovim eza alacritty firefox thunar wofi waybar hyprland hyprpaper
+sudo pacman -S --noconfirm ttf-meslo-nerd fastfetch zsh git ripgrep wl-clipboard neovim eza alacritty firefox thunar wofi waybar hyprland hyprpaper
 
 
 # --------------------- ZSH SHELL --------------------- #
@@ -15,7 +15,10 @@ chsh -s $(which zsh)
 
 # --------------------- BLUETOOTH --------------------- #
 
-sudo pacman -Syu --noconfirm bluez bluez-utils pulseaudio 
+sudo pacman -S --noconfirm bluez bluez-utils pulseaudio blueman pulseaudio-bluetooth
+sudo systemctl start bluetooth
+sudo systemctl enable bluetooth
+
 
 # ---------------------     YAY      --------------------- #
 
@@ -101,8 +104,8 @@ echo "Alacritty is done"
 
 echo "Installing cursor theme..."
 sudo pacman -Syu
-sudo pacman -S nwg-look
-yay -S rose-pine-cursor
+sudo pacman -S nwg-look yay -S rose-pine-cursor
+yay -S rose-pine-hyprcursor
 nwg-look
 
 echo "Cursor is done"
@@ -173,6 +176,18 @@ echo "Wofi is done"
 
 
 echo "ALL DONE!"
+
+
+ 
+# mkdir ~/.config/zsh
+# cd ~/.config/zsh
+# git clone https://github.com/romkatv/powerlevel10k.git
+# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+# git clone https://github.com/zsh-users/zsh-autosuggestions.git
+#
+# nvim ~/.p10k.zsh
+#   search for this line and set to 0
+#   typeset -g POWERLEVEL9K_DIR_BACKGROUND=0
 
 
 
